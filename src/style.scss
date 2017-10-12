@@ -1,7 +1,66 @@
-$headerClr: #5f6062;
-$submitClr: #0ca49a;
-$borderClr: #d5d5d5;
+@import "~normalize.css";
 
-body{
+$grey: #5f6062;
+$liteGrey: #cbcbcb;
+$submitClr: #0ca49a;
+
+body {
   background: #eeeeee;
+   font-family: Arial;
+
 }
+
+.container {
+  margin: 0 auto;
+  width: 75%;
+  min-width: 786px;
+}
+
+header {
+  color: $grey;
+}
+
+.logo {
+
+}
+
+.form-wrapper{
+  display: flex;
+  flex-direction: column;
+  background: white;
+  color: $grey;
+  padding: 3rem;
+
+  .row{
+    padding-bottom: 1rem;
+  }
+
+  label{
+    display: inline-block;
+    width: 9em;
+    text-transform: capitalize;
+  }
+
+  input{
+    display: inline-block;
+    width: 20em;
+    height:1.5em;
+    border: 1px solid $liteGrey;
+  }
+
+  button[type=submit]{
+    background: $submitClr;
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    font-weight:bold;
+    font-size:1em;
+
+    &:focus{
+      border: 2px solid lighten($submitClr,50%);
+      margin: -2px 0 0 -2px;
+    }
+  }
+}
+
+
