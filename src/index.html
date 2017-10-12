@@ -2,9 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <title>Reg::Exercise</title>
 </head>
 <body>
 
+<div class="container">
+    <header>
+        <div class="small-logo"></div>
+        <div class="logo"></div>
+        <h1>Registration excercise</h1>
+    </header>
+    <div class="form-wrapper">
+        <form action="server.php">
+            <div class="row">
+                <label for="email">email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="row">
+                <label for="birthday">birthday</label>
+                <input type="date" max="2009-13-10" name="birthday" id="birthday">
+            </div>
+            <div class="row">
+                <label for="password">password</label>
+                <input type="password" name="email" id="password">
+            </div>
+            <div class="row">
+                <label for="password">confirm password</label>
+                <input type="password" name="email" id="password">
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
+
+<script src="index.js"></script>
 </body>
 </html>
