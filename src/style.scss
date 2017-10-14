@@ -1,8 +1,13 @@
-@import "~normalize.css";
+html, body{
+  margin: 0;
+  padding: 0;
+}
 
 $grey: #5f6062;
 $liteGrey: #cbcbcb;
 $submitClr: #0ca49a;
+
+$maxWidth: 768px;
 
 body {
   background: #eeeeee;
@@ -13,7 +18,7 @@ body {
 .container {
   margin: 0 auto;
   width: 75%;
-  min-width: 768px;
+  min-width: $maxWidth;
 }
 
 header {
@@ -63,4 +68,8 @@ header {
   }
 }
 
-
+@media screen and (max-width: $maxWidth){
+  .form-wrapper label {
+    width: 100%;
+  }
+}
