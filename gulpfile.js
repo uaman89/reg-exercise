@@ -34,9 +34,12 @@ gulp.task('html', () => {
 });
 
 
-gulp.task('assets', () => {
-    return gulp.src('./src/assets/**/*', {base: 'src/assets'})
-        .pipe(gulp.dest('./dist/assets'));
+gulp.task('copy-files', () => {
+    return gulp.src([
+        './src/assets/**/*',
+        './server.php'
+    ], {base: 'src'})
+        .pipe(gulp.dest('./dist'));
 });
 
 
@@ -54,9 +57,9 @@ gulp.task('sass', (cb) => {
 // Static Server + watching scss/html files
 //----------------------------------------------------------------------------------------------------------------------
 
-gulp.task('build', function(callback) {
+gulp.task('build', function (callback) {
     runSequence('clean-dist',
-        ['assets', 'js', 'sass', 'html'],
+        ['copy-files', 'js', 'sass', 'html'],
         callback);
 });
 
