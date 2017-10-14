@@ -6,14 +6,14 @@ $submitClr: #0ca49a;
 
 body {
   background: #eeeeee;
-   font-family: Arial;
+  font-family: Arial;
 
 }
 
 .container {
   margin: 0 auto;
   width: 75%;
-  min-width: 786px;
+  min-width: 768px;
 }
 
 header {
@@ -24,40 +24,40 @@ header {
 
 }
 
-.form-wrapper{
+.form-wrapper {
   display: flex;
   flex-direction: column;
   background: white;
   color: $grey;
   padding: 3rem;
 
-  .row{
+  .row {
     padding-bottom: 1rem;
   }
 
-  label{
+  label {
     display: inline-block;
     width: 9em;
     text-transform: capitalize;
   }
 
-  input{
+  input {
     display: inline-block;
     width: 20em;
-    height:1.5em;
+    height: 1.5em;
     border: 1px solid $liteGrey;
   }
 
-  button[type=submit]{
+  button[type=submit] {
     background: $submitClr;
     color: white;
     border: none;
     padding: .5rem 1rem;
-    font-weight:bold;
-    font-size:1em;
+    font-weight: bold;
+    font-size: 1em;
 
-    &:focus{
-      border: 2px solid lighten($submitClr,50%);
+    &:focus {
+      border: 2px solid lighten($submitClr, 50%);
       margin: -2px 0 0 -2px;
     }
   }
