@@ -9,33 +9,39 @@
 
 <div class="container">
     <header>
-        <div class="logo"></div>
+        <a href="/" class="logo" alt="love knitting - home page"></a>
         <h1>Registration exercise</h1>
     </header>
-    <div class="form-wrapper">
-        <form id="regForm" action="server.php" method="post">
-            <div class="row">
-                <label for="email">email</label>
-                <input type="email"  placeholder="example@example.com" name="email" id="email" required aria-label="email">
-            </div>
-            <div class="row">
-                <label for="birthday">birthday</label>
-                <input type="date" max="2009-13-10" name="birthday" id="birthday" required aria-label="date of birth">
-            </div>
-            <div class="row">
-                <label for="password1">password</label>
-                <input type="password" name="email" id="password1" required aria-label="password">
-            </div>
-            <div class="row">
-                <label for="password2">confirm password</label>
-                <input type="password" name="email" id="password2" required aria-label="confirm password">
-            </div>
+    <div id="content">
+        <div class="form-wrapper">
+            <form id="regForm" action="server.php" method="post">
+                <div class="row">
+                    <label for="email">email</label>
+                    <input type="email" placeholder="example@example.com" name="email" id="email" required
+                           aria-label="email">
+                </div>
+                <div class="row">
+                    <label for="birthday">birthday</label>
+                    <input type="date" max="2009-13-10" name="birthday" id="birthday" required
+                           aria-label="date of birth">
+                </div>
+                <div class="row">
+                    <label for="password1">password</label>
+                    <input type="password" name="password1" id="password1" required aria-label="password">
+                </div>
+                <div class="row">
+                    <label for="password2">confirm password</label>
+                    <input type="password" name="password2" id="password2" required aria-label="confirm password">
+                </div>
 
 
-            <button id="submitBtn" type="submit">Register</button>
-            <hr>
-            <div><small>All fields are required!</small></div>
-        </form>
+                <button id="submitBtn" type="submit">Register</button>
+                <hr>
+                <div>
+                    <small>All fields are required!</small>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 

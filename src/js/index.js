@@ -1,11 +1,6 @@
 import {validateBirthday, validatePassword} from "./validation";
 import {post} from "./ajax"
 
-var p = post('server.php', 'name=vasya');
-p.then(function(res){
-    console.log("res", res);
-});
-
 function submitForm(e){
     console.log('e:', e);
     e.preventDefault();
@@ -14,7 +9,7 @@ function submitForm(e){
     post('/server.php', new FormData(e.target)).then(
         function(res){
             console.log('res:', res);
-
+            document.querySelector("#content").innerHTML = res;
         },
         alert("Sorry, can't sent data.")
     );
