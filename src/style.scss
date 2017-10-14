@@ -71,6 +71,10 @@ header {
       border: 2px solid lighten($submitClr, 50%);
       margin: -2px 0 0 -2px;
     }
+
+    &:disabled{
+      background: #5f6062;
+    }
   }
 }
 
