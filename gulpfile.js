@@ -1,7 +1,6 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
-// const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
 //const uglify = require('gulp-uglify');
 const pump = require('pump');
