@@ -3,17 +3,20 @@ const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 // const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
-const uglify = require('gulp-uglify');
+//const uglify = require('gulp-uglify');
 const pump = require('pump');
+var webpackStream = require('webpack-stream');
+var webpack3 = require('webpack');
 
 gulp.task('js', (cb) => {
 
     pump([
         gulp.src('./src/index.js'),
         sourcemaps.init(),
-        uglify(),
+        webpackStream( require('./webpack.config.js'), webpack3 ),
+        sourcemaps.write(),
         gulp.dest('./dist')
-    ], cb);
+    ],cb);
 });
 
 
