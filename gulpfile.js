@@ -7,6 +7,7 @@ const pump = require('pump');
 var webpackStream = require('webpack-stream');
 var webpack3 = require('webpack');
 var clean = require('gulp-clean');
+var runSequence = require('run-sequence');
 
 gulp.task('clean-dist', () => {
     return gulp.src('dist', {read: false})
@@ -53,7 +54,13 @@ gulp.task('sass', (cb) => {
 // Static Server + watching scss/html files
 //----------------------------------------------------------------------------------------------------------------------
 
-gulp.task('default', ['clean-dist', 'assets', 'js', 'sass', 'html'], () => {
+gulp.task('build', function(callback) {
+    runSequence('clean-dist',
+        ['assets', 'js', 'sass', 'html'],
+        callback);
+});
+
+gulp.task('default', ['build'], () => {
 
     browserSync.init({
         server: "./dist"
