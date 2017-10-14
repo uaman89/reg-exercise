@@ -1,4 +1,4 @@
-html, body{
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -23,10 +23,16 @@ body {
 
 header {
   color: $grey;
+  display: flex;
+  align-items: center;
+  padding: .5rem 0;
 }
 
 .logo {
-
+  width: 300px;
+  height: 105px;
+  background: url("assets/logo-loveknitting.svg");
+  margin-right:2rem;
 }
 
 .form-wrapper {
@@ -68,7 +74,12 @@ header {
   }
 }
 
-@media screen and (max-width: $maxWidth){
+@media screen and (max-width: $maxWidth) {
+  .logo {
+    width: 75px;
+    background: url("assets/logo-loveknitting-sm.svg");
+  }
+
   .form-wrapper label {
     width: 100%;
   }
