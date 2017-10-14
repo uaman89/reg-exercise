@@ -78,6 +78,16 @@ header {
   }
 }
 
+.preloader{
+  //display: inline-block;
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  background: url(assets/spinner.svg) no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
 @media screen and (max-width: $maxWidth) {
   .logo {
     width: 75px;
