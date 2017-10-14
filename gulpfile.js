@@ -75,7 +75,7 @@ gulp.task('default', ['build'], () => {
 
     gulp.watch([
         "./dist/index.html",
-        "./dist/index.js",
+        "./dist/js/index.js",
         "./dist/style.css"
     ]).on('change', browserSync.reload);
 });

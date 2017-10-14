@@ -10,8 +10,12 @@ function submitForm(e){
         function(res){
             console.log('res:', res);
             document.querySelector("#content").innerHTML = res;
+            window.history.pushState({},'/success');
         },
-        alert("Sorry, can't sent data.")
+        function(err) {
+            console.error('on post():', err);
+            alert("Sorry, can't sent data.")
+        }
     );
     return false;
 }
