@@ -37,7 +37,7 @@ gulp.task('html', () => {
 gulp.task('copy-files', () => {
     return gulp.src([
         './src/assets/**/*',
-        './server.php'
+        './src/server.php'
     ], {base: 'src'})
         .pipe(gulp.dest('./dist'));
 });
@@ -48,7 +48,7 @@ gulp.task('copy-files', () => {
 gulp.task('sass', (cb) => {
     pump([
         gulp.src('./src/**/*.scss'),
-        sass().on('error', sass.logError),
+        sass({outputStyle: 'compressed'}).on('error', sass.logError),
         gulp.dest('./dist')
     ], cb);
 });
