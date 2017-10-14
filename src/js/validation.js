@@ -1,16 +1,12 @@
 export function validateBirthday(e) {
-    console.log('e:', e);
     var date = new Date(e.target.value);
 
     var tmp = e.target.max.split('-');
     var maxDate = new Date(tmp[0], tmp[1], tmp[2]);
 
-    console.log('maxDate:', maxDate);
     if (date > maxDate) {
-        console.log('lol:');
         e.target.setCustomValidity("Sorry, you are too young...");
     } else {
-        console.log('ok:');
         e.target.setCustomValidity('');
     }
 }
